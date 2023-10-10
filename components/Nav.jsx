@@ -53,7 +53,7 @@ const Nav = () => {
               onClick={signOut}
               className="outline_btn"
             >
-              SignOut
+              Sign Out
             </button>
 
             <Link href='/profile'>
@@ -76,7 +76,7 @@ const Nav = () => {
                   onClick={() => signIn(provider.id)}
                   className="black_btn"
                 >
-                  SignIn
+                  Sign In
                 </button>
               ))
             }
