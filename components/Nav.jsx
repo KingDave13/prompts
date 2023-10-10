@@ -10,7 +10,7 @@ import {
 const Nav = () => {
   const { data: session } = useSession();
 
-  const [Providers, setProviders] = useState(null);
+  const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Nav = () => {
       {/* Desktop Navigation */}
 
       <div className="sm:flex hidden">
-        {isUserLoggedIn ? (
+        {session?.user ? (
           <div className="flex gap-3 md:gap-5">
             <Link href='/create-prompt' className="black_btn">
               Create Post
@@ -68,7 +68,7 @@ const Nav = () => {
           </div>
         ) : (
           <>
-            {Providers && 
+            {providers && 
               Object.values(providers).map((provider) => (
                 <button
                   type="button"
@@ -131,7 +131,7 @@ const Nav = () => {
           </div>
         ) : (
           <>
-            {Providers && 
+            {providers && 
               Object.values(providers).map((provider) => (
                 <button
                   type="button"
