@@ -21,9 +21,13 @@ const CreatePrompt = () => {
         try {
             const response = await fetch('api/prompt/new',
             {
-                method: 'POST'
+                method: 'POST',
+                body: JSON.stringify({
+                    prompt: post.prompt,
+                    tag: post.tag,
+                })
             })
-        } catch {
+        } catch (error) {
 
         }
     }
