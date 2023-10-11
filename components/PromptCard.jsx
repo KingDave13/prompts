@@ -53,6 +53,7 @@ const PromptCard = ({
             ? '/assets/icons/tick.svg'
             : '/assets/icons/copy.svg'
             }
+            alt='copy_image'
             width={12}
             height={12}
           />
