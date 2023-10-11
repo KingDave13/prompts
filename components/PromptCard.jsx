@@ -15,7 +15,7 @@ const PromptCard = ({
     setCopied(post.prompt);
     navigator.clipboard.writeText(post.prompt);
     setTimeout(() => setCopied(''), 3000);
-  }
+  };
 
   return (
     <div className='prompt_card'>
@@ -43,14 +43,14 @@ const PromptCard = ({
 
         <div 
           className='copy_btn'
-          onClick={() => {handleCopy}}
+          onClick={handleCopy}
         >
           <Image 
             src={copied === post.prompt 
             ? '/assets/icons/tick.svg'
             : '/assets/icons/copy.svg'
             }
-            width={12}
+            width={14}
             height={12}
           />
         </div>
