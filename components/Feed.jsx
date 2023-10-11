@@ -1,4 +1,7 @@
-import React from 'react'
+'use client';
+
+import { useState, useEffect } from 'react';
+import PromptCard from './PromptCard';
 
 const Feed = () => {
   return (
@@ -6,4 +9,4 @@ const Feed = () => {
   )
 }
 
-export default Feed
+export default Feed;
