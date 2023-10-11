@@ -8,6 +8,9 @@ import { usePathname, useRouter } from 'next/navigation';
 const PromptCard = ({ 
   post, handleTagClick, handleEdit, handleDelete 
 }) => {
+
+  const [copied, setCopied] = useState('');
+
   return (
     <div className='prompt_card'>
       <div className='flex justify-between items-start gap-5'>
@@ -21,8 +24,9 @@ const PromptCard = ({
             className='rounded-full object-contain'
           />
 
-          <div className='flex flex_col'>
-            <h3 className='font-satoshi font-semibold text-gray-900'>
+          <div className='flex flex-col items-start'>
+            <h3 className='font-satoshi font-semibold text-gray-900
+            text-[16px]'>
               {post.creator.username}
             </h3>
             <p className='font-inter text-sm text-gray-500'>
@@ -36,10 +40,22 @@ const PromptCard = ({
           onClick={() => {}}
         >
           <Image 
-            src={}
+            src={copied === post.prompt 
+            ? '/assets/icons/tick.svg'
+            : '/assets/icons/copy.svg'
+            }
+            width={12}
+            height={12}
           />
         </div>
       </div>
+
+      <p>
+        {post.prompt}
+      </p>
+      <p>
+        {post.tag}
+      </p>
     </div>
   )
 };
