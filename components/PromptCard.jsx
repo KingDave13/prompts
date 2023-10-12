@@ -86,7 +86,7 @@ const PromptCard = ({
         </div>
       )}
     </div>
-  );
+  )
 };
 
 export default PromptCard;
